@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout Creation</title>
+
+  <style>
+    /* Flex container styling */
+    .holder {
+      display: flex;               /* Enable flexbox layout */
+      flex-direction: row;         /* Arrange items in a row */
+      justify-content: space-between; /* Space between items, touching edges */
+      flex-wrap: wrap;             /* Allow wrapping to the next line if overflow */
+      width: 100%;                 /* Full width to touch edges */
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Flex items styling */
+    .item {
+      background-color: lightcoral;
+      color: white;
+      padding: 20px 40px;
+      margin: 10px 0;             /* Vertical margin only to keep space between rows */
+      border-radius: 8px;
+      font-size: 18px;
+      text-align: center;
+      flex-shrink: 0;             /* Prevent items from squashing */
+    }
+  </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div class="holder">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+  </div>
 
+  <script type="text/javascript" src="./script.js"></script>
 </body>
-
 </html>
